@@ -1,0 +1,22 @@
+﻿@using Sample.Model.Pies;
+@model PieViewModel 
+
+<h2>@Model.Title</h2>
+
+<div class="row">
+
+    @foreach (var item in Model.Pies)
+    {
+        <div class="col-lg-4">
+            <div class="img-thumbnail">
+                <img src="@item.ImageThumbnailUrl" alt="" />
+                <div class="figure-caption">
+                    <h3 class="float-right">@item.Price.ToString("c")</h3>
+                    <h3>@item.Name</h3>
+                    <p>@item.ShortDescription</p>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
