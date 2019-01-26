@@ -21,9 +21,20 @@ namespace Sample.Controllers
             var data = this.pieRepository.GetAllPies().OrderBy(a => a.Name);
             return View(new PieViewModel
             {
-                Title = "Welcome to Beth",
+                Title = "Welcome to Bethanya's Pie Shop",
                 Pies = data.Any() ? data.ToList() : new List<Pie>()
             });
         }
+
+        public IActionResult Details(int id)
+        {
+            var data = this.pieRepository.GetPieById(id);
+            if (data == null)
+                return NotFound();
+
+            return View(data);
+        }
+
+
     }
 }

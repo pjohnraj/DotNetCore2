@@ -10,6 +10,7 @@ namespace Sample
         public ServiceRegister(IServiceCollection services)
         {
             services.AddTransient<IPieRepository, PieRepository>();
+            services.AddTransient<IFeedBackReposistory, FeedBackReposistory>();
         }
     }
 }
