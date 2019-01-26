@@ -6,17 +6,18 @@ namespace Sample.DataContext
 
     public class AppDbContext: DbContext
     {
-        const string connectionString = "Server=(localdb)\\mssqllocaldb;Database=ClientDb;Trusted_Connection=True;";
+        const string connectionString = "Server=(localdb)\\MSSQLLocalDB;Database=BethenyDemo;Trusted_Connection=True;MultipleActiveResultSets=true";
 
         public AppDbContext() : base() { }
 
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
-         
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(connectionString);
         }
 
         public DbSet<Pie> Pies { get; set; }
+        public DbSet<FeedBack> FeedBacks { get; set; }
     }
 }

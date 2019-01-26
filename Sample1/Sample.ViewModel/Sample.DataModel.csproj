@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
-    <RootNamespace>Sample.ViewModel</RootNamespace>
+    <RootNamespace>Sample.DataModel</RootNamespace>
   </PropertyGroup>
 
 </Project>
